@@ -151,8 +151,8 @@ async def on_message(message):
             embed = discord.Embed(description = "사다리 윗줄 혹은 아랫줄의 설정을 확인해주세요.")
             await client.send_message(message.channel, embed = embed)
             
-    elif message.content.startswith('!설명'):
-         embed = discord.Embed(description = "- 간단한 사다타기 기능을 가진 봇\n- 사다리를 텍스트 형식으로 출력\n- 명령어\n　- !사다리설정 (0 or 1) (ID1)/(ID2)/.../(IDn)\n　　- 0일 시 사다리타기 윗 줄 설정\n　　- 1일 시 사다리 타기 아랫 줄 설정\n　　- 윗 줄과 아랫 줄의 개수가 다를 경우 진행x\n　- !설정완료\n　　- 이 명령어를 입력할 때마다 새로운 사다리를 그림\n　- !사다리진행 (1~n)\n　　- 인덱스 값에 해당하는 ID의 사다리타기 결과 출력\n　- !사다리결과\n　　- 사다리타기의 모든 결과를 간단하게 출력")
+    elif message.content.startswith('!도움말'):
+         embed = discord.Embed(description = "- 티에가 오픈소스 가져와서 수정한 봇\n- 사다리를 텍스트로 출력합니다\n- 명령어\n　- !사다리설정 (0 또는 1) (닉네임1)/(닉네임2)/.../(닉네임n) \n　　- 0일 시 사다리타기 윗 줄 설정\n　　- 1일 시 사다리 타기 아랫 줄 설정\n　　- 윗 줄과 아랫 줄의 개수가 다를 경우 진행x\n　- !설정완료\n　　- 이 명령어를 입력할 때마다 새로운 사다리를 그립니다(계속변경된단거)\n　- !사다리진행 (1~n)\n　　- ID의 사다리타기 결과 출력\n　- !사다리결과\n　　- 사다리타기의 모든 결과를 간단하게 출력")
          await client.send_message(message.channel, embed = embed)
         
 access_token = os.environ['BOT_TOKEN']           
